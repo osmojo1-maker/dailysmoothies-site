@@ -182,33 +182,8 @@
     </div>
 
     <div class="form-container">
-      <!-- TODO: Replace with actual MailerLite form embed -->
-      <form id="smoothie-form" action="https://assets.mailerlite.com/jsonp/XXXXX/forms/XXXXX/subscribe" method="post">
-        <div class="form-group">
-          <label for="email">Email Address:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="fields[email]" 
-            placeholder="your@email.com" 
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="name">First Name (optional):</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="fields[name]" 
-            placeholder="Your first name"
-          />
-        </div>
-
-        <button type="submit" class="submit-button">
-          Send Me The Free Recipes! 🎉
-        </button>
-      </form>
+      <!-- MailerLite Universal -->
+      <div class="ml-embedded" data-form="182761726650877717"></div>
     </div>
 
     <div class="guarantee">
@@ -222,12 +197,14 @@
     </div>
   </div>
 
+  <!-- MailerLite Universal -->
   <script>
-    // TODO: Add MailerLite form handling
-    document.getElementById('smoothie-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Form will be connected to MailerLite. Integration coming soon!');
-    });
+   (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+   .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+   n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+   (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+   ml('account', '2215853');
   </script>
+  <!-- End MailerLite Universal -->
 </body>
 </html>
