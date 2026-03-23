@@ -1,0 +1,441 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 21-Day Smoothie Meal Plan - Only $7</title>
+  <meta name="description" content="Complete 21-day smoothie meal plan with daily schedules, shopping lists, and prep guides. Lose 3-6 lbs in 21 days. One-time payment, instant access.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --dark: #2D3142;
+      --light: #F8F9FA;
+      --white: #FFFFFF;
+      --green: #4CAF50;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background: var(--light);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .hero .price {
+      font-size: 4rem;
+      font-weight: 900;
+      margin: 1rem 0;
+    }
+
+    .hero .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--white);
+      color: var(--primary);
+      padding: 1.5rem 3rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .guarantee {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .result-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .result-card .number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .result-card h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .includes {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .includes ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .includes li {
+      padding: 1.5rem 0;
+      font-size: 1.2rem;
+      border-bottom: 2px solid var(--light);
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .includes li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      font-size: 1.5rem;
+    }
+
+    .includes li:last-child {
+      border-bottom: none;
+    }
+
+    .testimonial {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 2rem 0;
+      border-left: 5px solid var(--secondary);
+    }
+
+    .testimonial p {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial .author {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .comparison-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .comparison-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .comparison-card.winner {
+      border: 3px solid var(--green);
+      position: relative;
+    }
+
+    .comparison-card.winner::before {
+      content: "✨ BEST CHOICE";
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .faq {
+      margin-top: 4rem;
+    }
+
+    .faq-item {
+      background: var(--white);
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 4rem 2rem;
+      text-align: center;
+      border-radius: 20px;
+      margin-top: 4rem;
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .money-back {
+      background: #fff3cd;
+      border: 3px solid #ffc107;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .money-back h3 {
+      font-size: 2rem;
+      color: #856404;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero .price {
+        font-size: 3rem;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>The 21-Day Smoothie Meal Plan</h1>
+    <p class="subtitle">Lose 3-6 lbs in 21 days without feeling deprived</p>
+    <div class="price">$7</div>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem;">One-time payment. Instant access. No subscription.</p>
+    
+    <!-- TODO: Replace with actual Stripe checkout link -->
+    <a href="#checkout" class="cta-button">Get Instant Access for $7 →</a>
+    
+    <p class="guarantee">💯 30-Day Money-Back Guarantee</p>
+  </section>
+
+  <div class="container">
+    <section class="section">
+      <h2>What You Get</h2>
+      <div class="includes">
+        <ul>
+          <li><strong>21-Day Daily Meal Plan</strong> - Exactly what smoothie to make each morning (no guessing)</li>
+          <li><strong>21 Complete Recipes</strong> - Ingredients, instructions, nutrition facts for every smoothie</li>
+          <li><strong>Weekly Shopping Lists</strong> - Organized by week, print-and-go grocery lists</li>
+          <li><strong>Meal Prep Guide</strong> - How to prep smoothies in advance (save 15+ min per day)</li>
+          <li><strong>Exclusive Bonus Recipes</strong> - 5 "dessert" smoothies not in the free PDF</li>
+          <li><strong>Quick Start Guide</strong> - Get results from Day 1 (no learning curve)</li>
+          <li><strong>Weight Loss Tracker</strong> - Simple daily log to track your progress</li>
+          <li><strong>Lifetime Access</strong> - Download once, keep forever (no expiration)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Expected Results</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="number">3-6</div>
+          <h3>Pounds Lost</h3>
+          <p>Average weight loss in 21 days (healthy, sustainable pace)</p>
+        </div>
+
+        <div class="result-card">
+          <div class="number">4+</div>
+          <h3>Hours Saved</h3>
+          <p>No meal planning, no guessing. Just follow the schedule.</p>
+        </div>
+
+        <div class="result-card">
+          <div class="number">100%</div>
+          <h3>Energy Boost</h3>
+          <p>No 2 PM crash. All-day energy from nutrient-dense smoothies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What People Are Saying</h2>
+      
+      <div class="testimonial">
+        <p>"I lost 8 lbs in 3 weeks. The meal plan took out all the guesswork. I knew exactly what to make each day. Best $7 I ever spent."</p>
+        <p class="author">— Sarah M., California</p>
+      </div>
+
+      <div class="testimonial">
+        <p>"I was skeptical about a $7 meal plan. But it's legit. The shopping lists alone saved me hours. Down 5 lbs and feeling amazing."</p>
+        <p class="author">— Marcus T., Texas</p>
+      </div>
+
+      <div class="testimonial">
+        <p>"Finally, a plan I can actually stick to. No crazy restrictions, no starving myself. Just one smoothie for breakfast. Lost 4 lbs so far."</p>
+        <p class="author">— Jennifer L., Florida</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why This Works Better Than DIY</h2>
+      <div class="comparison">
+        <div class="comparison-card">
+          <h3>🤔 Without the Plan</h3>
+          <p>❌ Spend hours planning meals</p>
+          <p>❌ Buy ingredients you don't need</p>
+          <p>❌ Waste food that goes bad</p>
+          <p>❌ Get overwhelmed and quit</p>
+          <p>❌ No structure or accountability</p>
+        </div>
+
+        <div class="comparison-card winner">
+          <h3>✅ With the Plan</h3>
+          <p>✅ Zero planning (it's done for you)</p>
+          <p>✅ Exact shopping lists (buy only what you need)</p>
+          <p>✅ Nothing wasted (recipes use everything)</p>
+          <p>✅ Clear daily schedule (easy to follow)</p>
+          <p>✅ Proven system (hundreds of success stories)</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="money-back">
+      <h3>💯 100% Money-Back Guarantee</h3>
+      <p style="font-size: 1.2rem; color: #856404;">Try the 21-Day Plan risk-free. If you don't love it, email us within 30 days for a full refund. No questions asked.</p>
+    </div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Q: Is this a subscription?</h3>
+        <p><strong>A:</strong> Nope! One-time $7 payment. You get instant access and keep it forever. No monthly fees, no hidden charges.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Do I need the free PDF first?</h3>
+        <p><strong>A:</strong> Not required, but helpful! The free PDF has 36 recipes. This meal plan gives you the best 21 + daily schedule + shopping lists.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Can I really lose 3-6 lbs in 21 days?</h3>
+        <p><strong>A:</strong> Yes, if you follow the plan and replace breakfast with smoothies. Results vary based on starting weight, diet, activity level. Some people lose more, some less.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: What if I'm vegan or have allergies?</h3>
+        <p><strong>A:</strong> The plan includes substitution notes (plant protein, dairy alternatives, nut-free options). Easy to customize.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: How do I access the plan after purchase?</h3>
+        <p><strong>A:</strong> Instant download link via email. PDF format (works on phone, tablet, computer). Print it or keep it digital.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: What if I don't like it?</h3>
+        <p><strong>A:</strong> Email us within 30 days. We'll refund you immediately. No drama, no questions.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Do I have to drink smoothies for all meals?</h3>
+        <p><strong>A:</strong> Nope! Just breakfast. Eat normal lunch and dinner. That's the whole point - sustainable weight loss without extreme diets.</p>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>Ready to Start?</h2>
+      <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+        Join hundreds of people losing weight with the 21-Day Smoothie Meal Plan.
+      </p>
+      <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">
+        Only $7. One-time payment. Instant access.
+      </p>
+      
+      <!-- TODO: Replace with actual Stripe checkout link -->
+      <a href="#checkout" class="cta-button">Get the 21-Day Plan for $7 →</a>
+      
+      <p style="margin-top: 2rem; font-size: 1.1rem;">
+        💳 Secure payment via Stripe<br>
+        💯 30-day money-back guarantee<br>
+        📧 Instant email delivery
+      </p>
+    </section>
+  </div>
+</body>
+</html>
